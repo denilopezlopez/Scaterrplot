@@ -41,6 +41,113 @@ var rectangle = svgContainer.append("rect")
 			.attr("width", 50)
 			.attr("height", 50);
 
+	
+d3.select("#start”).on("click", function() {
+rectangle
+	.transition()
+	.attr(“x”, 250)// New Position
+
+});
+
+d3.select(“#reset”).on("click", function() {
+rectangle
+	.transition()
+	.attr(“x”, 50)// Old Position
+
+});
+
+d3.select("#start2”).on("click", function() {
+rectangle
+	.transition()
+	.attr(“x”, 250)
+	.attr(“opacity”, 0.5)
+
+});
+
+d3.select(“#reset2”).on("click", function() {
+rectangle
+	.transition()
+	.attr(“x”, 50)// Old Position
+	.attr(“y”, 50)
+	.attr(“opacity”, 1)
+
+});
+
+d3.select("#start3”).on("click", function() {
+rectangle
+	.transition()
+	.attr(“x”, 250)
+	.attr(“opacity”, 0.5)
+	.attr(“fill”, ‘blue’); 
+
+});
+
+	d3.select(“#reset3”).on("click", function() {
+rectangle
+	.transition()
+	.attr(“x”, 50)// Old Position
+	.attr(“y”, 50)
+	.attr(“opacity”, 1)
+	.attr(“fill”, ‘green’);
+
+});
+
+d3.select("#start4”).on("click", function() {
+rectangle
+	.transition()
+	.attr(“fill”, “red”)//New Color (Hex, RGB, or Web Safe)
+	.attr(“opacity”, 0.5)// New Opacity
+	.attr(“width”, 100)// New Width
+	.attr(“height”, 100)// New Height
+	.attr(“x”, 250)
+	.delay(100); // New Position
+
+});
+
+d3.select(“#reset4”).on("click", function() {
+rectangle
+	.transition()
+	.attr(“x”, 50) // Old Position
+	.attr(“y”, 50)
+	.attr(“opacity”, 1)
+	.attr(“fill”, ‘green’);
+
+});
+
+
+d3.select("#start5”).on("click", function() {
+rectangle
+	.transition()
+	.attr(“x”, 250)// New Position
+	.duration(2500);// Set Duration of 2500ms (2.5 seconds)
+
+});
+
+d3.select(“#reset5”).on("click", function() {
+rectangle
+	.transition()
+	.attr(“x”, 50) // Old Position
+	.duration(2500);// Set Duration of 2500ms (2.5 seconds)
+
+});
+
+d3.select("#start6”).on("click", function() {
+rectangle
+	.transition()
+	.attr(“x”, 250)// New Position
+	.duration(2500);// Set Duration of 2500ms (2.5 seconds)
+	.ease (d3.easeBounce); // Use the Bounce Transition Ease
+
+});
+
+d3.select(“#reset6”).on("click", function() {
+rectangle
+	.transition()
+	.attr(“x”, 50) // Old Position
+	.ease(d3.easeBounce);// Use the Bounce Transition Ease
+
+});
+	
 d3.select("#start7").on("click", function() {
 rectangle
 		 .transition()
