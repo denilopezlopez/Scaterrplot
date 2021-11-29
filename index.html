@@ -12,9 +12,11 @@
 <body>
 	<button id="start">Transition</button> 
 	<button id="reset">Reset</button>
+	
 	<div id="main">
 
 	</div>
+	
 <script type="text/javascript">
 	
 	// Width and height of the SVG object
@@ -38,22 +40,22 @@
 		.attr("height", 50);
 	
 	d3.select("#start”).on("click", function() {
-		rectangle
-			.transition()
-			.attr(“x”, 250); // New Position
+	rectangle
+		.transition()
+		.attr(“x”, 250); // New Position
 	});
 
 	d3.select(“#reset”).on("click", function() {
-		rectangle
-			.transition()
-			.attr(“x”, 50); // Old Position
+	rectangle
+		.transition()
+		.attr(“x”, 50); // Old Position
 	});
 
 	d3.select("#start2”).on("click", function() {
-		rectangle
-			.transition()
-			.attr(“x”, 250)
-			.attr(“opacity”, 0.5);
+	rectangle
+		.transition()
+		.attr(“x”, 250)
+		.attr(“opacity”, 0.5);
 	});
 
 	d3.select(“#reset2”).on("click", function() {
